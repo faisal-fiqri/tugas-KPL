@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Salary Page</title>
+</head>
+<body>
+    <div class="head"></div>
+    <div class ="wrapper">
+        <h1>Hitung Gaji Karyawan</h1>
+    
+    <table>
+        <tr>
+            <td><label>NIK</label></td>
+            <td align="center"><input type="text" maxlength="16" id="nik" required></td>
+            
+        </tr>
+        <tr>
+            <td><label>Nama Karyawan</label></td>
+            <td align="center"><input type="text" maxlength="50" id="nama"></td>
+        </tr>
+        <tr>
+            <td><label>Jenis Kelamin</label></td>
+            <td align="center"><input type="radio" name="gender" value="pria">Pria <input type="radio" name="gender" value="wanita">Wanita</td>
+        </tr>
+        <tr>
+            <td><label>Golongan</label></td>
+            <td align="center"><select id="golongan" onchange="golongan()">
+                <option value="default">--Pilih Golongan--</option>
+                <option value="gol1">Golongan 1</option>
+                <option value="gol2">Golongan 2</option>
+                <option value="gol3">Golongan 3</option>
+                <option value="gol4">Golongan 4</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Gaji Pokok</label></td>
+            <td><label>Rp.</label><input type="text" id="gapok" readonly></td>
+        </tr>
+        <tr>
+            <td><label>Tunjangan</label></td>
+            <td><label>Rp.</label><input type="text" id="tunjangan"></td>
+        </tr>
+        <tr>
+            <td><label>Potongan</label></td>
+            <td><label>Rp.</label><input type="text" id="potong"></td>
+        </tr>
+        <tr>
+            <td><label>Total</label></td>
+            <td><label>Rp.</label><input type="text" id="total" readonly></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="reset">Reset</button>
+                <button onclick="hitung()">Hitung</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
